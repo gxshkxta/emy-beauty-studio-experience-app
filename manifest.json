@@ -1,0 +1,15 @@
+{
+  "name": "EMY Beauty Studio",
+  "short_name": "EMY",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0822",
+  "theme_color": "#1a0822",
+  "icons": [
+    {
+      "src": "emy-bgapp.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
