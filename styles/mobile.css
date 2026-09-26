@@ -1,0 +1,98 @@
+#app-container {
+    width: 100%;
+    max-width: 480px; /* Ограничаваме ширината за телефони */
+    margin: 0 auto;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 100vh;
+}
+
+.app-header { 
+    text-align: center; 
+}
+
+/* Златно, блестящо и ПЛЪТНО EMY */
+.app-header h1 { 
+    font-size: 3rem; 
+    font-weight: 1000; /* Тук даваме тежестта на логото */
+    letter-spacing: 12px; 
+    line-height: 1; 
+    margin-right: -12px; 
+    color: var(--primary-gold); 
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.3); 
+}
+
+/* Ръкописен шрифт за подзаглавието */
+.app-header p { 
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 1.6rem; 
+    letter-spacing: 2px; 
+    color: rgba(255, 255, 255, 0.9); /* Сложих го светло бяло, за да изпъкне златното EMY */
+    text-transform: none; /* Спираме главните букви, за да стои красиво ръкописно */
+    margin-top: 5px; 
+}
+.view-header { 
+    margin-bottom: 25px; 
+    text-align: center; /* Центрираме го, за да стои като красив акцент */
+}
+.view-header h2 { 
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 2.5rem; /* По-голям размер, защото ръкописните шрифтове стоят по-дребни */
+    font-weight: 400; 
+    color: rgba(255, 255, 255, 0.9);
+}
+.view-header p { font-size: 0.85rem; color: var(--text-dim); }
+
+/* Вътрешни стилове за компонента Календар */
+.calendar-wrapper { display: flex; flex-direction: column; gap: 15px; }
+.calendar-nav { display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; font-weight: 300; }
+.calendar-nav i { cursor: pointer; padding: 10px; color: var(--text-dim); transition: color 0.3s; }
+.calendar-nav i:hover { color: var(--primary-gold); }
+.calendar-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-size: 0.8rem; color: var(--text-dim); }
+.calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center; }
+.calendar-day { 
+    aspect-ratio: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    font-size: 0.95rem; 
+    font-weight: 300; 
+    cursor: pointer; 
+    position: relative; 
+    transition: all 0.3s ease; 
+    
+    /* Новият ефект: меко кръгче за всеки свободен ден */
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.calendar-day:hover:not(.disabled) {
+    background: rgba(255, 215, 0, 0.15);
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+/* Миналите дни нямат кръгче, за да не разсейват */
+.calendar-day.disabled { 
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.2); 
+    cursor: not-allowed; 
+}
+
+.calendar-day:not(.disabled):active { 
+    transform: scale(0.9); 
+}
+
+/* Избраният ден свети като златен бутон */
+.calendar-day.selected { 
+    background: rgba(255, 215, 0, 0.15);
+    border: 1px solid var(--primary-gold); 
+    color: var(--primary-gold); 
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(255, 215, 0, 0.2); 
+}
+
+.calendar-day.has-slots::after { content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; background-color: var(--text-dim); border-radius: 50%; }
+.calendar-day.selected.has-slots::after { background-color: var(--primary-gold); }

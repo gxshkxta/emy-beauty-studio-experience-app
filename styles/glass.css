@@ -1,0 +1,27 @@
+@keyframes softPulse {
+    0% {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 0px rgba(255, 215, 0, 0);
+        background: var(--bg-glass);
+    }
+    50% {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 215, 0, 0.15);
+        background: rgba(255, 255, 255, 0.04);
+    }
+    100% {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 0px rgba(255, 215, 0, 0);
+        background: var(--bg-glass);
+    }
+}
+
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border-glass);
+    border-top: 1px solid var(--border-glass-light);
+    border-left: 1px solid var(--border-glass-light);
+    border-radius: 25px;
+    padding: 25px 20px;
+    /* Активираме пулсирането: 4 секунди за един пълен цикъл, безкрайно */
+    animation: softPulse 4s infinite ease-in-out;
+}

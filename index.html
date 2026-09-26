@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EMY Booking</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/glass.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+</head>
+<body>
+    <!-- Фон -->
+    <img src="emy-bgapp.png" id="app-bg" alt="EMY Background">
+
+    <!-- Основен App Контейнер -->
+    <main id="app-container">
+        <!-- App Хедър -->
+        <header class="app-header">
+            <h1>EMY</h1>
+            <p>beauty studio experience</p>
+        </header>
+
+        <!-- Календарен панел -->
+        <section id="calendar-view" class="glass-panel">
+            <div class="view-header">
+                <h2>It's your time ♡</h2>
+            </div>
+            
+            <!-- Тук JS ще рендира календара -->
+            <div id="calendar-mount"></div> 
+        </section>
+    </main>
+
+    <!-- Основен JS като модул -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
