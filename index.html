@@ -33,8 +33,24 @@
             <!-- Тук JS ще рендира календара -->
             <div id="calendar-mount"></div> 
         </section>
-    </main>
 
+    </main>
+<!-- Времеви слотове (Скрито по подразбиране) -->
+        <section id="time-view" class="glass-panel" style="display: none; margin-top: 20px;">
+            <div class="view-header" style="margin-bottom: 15px;">
+                <h2 style="font-size: 1.3rem;">Свободни часове</h2>
+                <p id="selected-date-display" style="color: var(--primary-gold);"></p>
+            </div>
+            <div id="time-mount"></div>
+        </section>
+
+        <!-- Процедури (Скрито по подразбиране) -->
+        <section id="service-view" class="glass-panel" style="display: none; margin-top: 20px;">
+            <div class="view-header" style="margin-bottom: 15px;">
+                <h2 style="font-size: 1.3rem;">Избери процедура</h2>
+            </div>
+            <div id="service-mount"></div>
+        </section>
     <!-- Основен JS като модул -->
     <script type="module" src="main.js"></script>
 </body>
