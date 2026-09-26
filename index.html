@@ -33,6 +33,48 @@
             <!-- Тук JS ще рендира календара -->
             <div id="calendar-mount"></div> 
         </section>
+        <!-- Форма за клиентски данни (Скрито по подразбиране) -->
+        <section id="form-view" class="glass-panel" style="display: none; margin-top: 20px;">
+            <div class="view-header" style="margin-bottom: 15px;">
+                <h2 style="font-size: 1.3rem;">Твоите данни</h2>
+                <p>За да финализираме заявката</p>
+            </div>
+            <form id="booking-form" class="booking-inputs">
+                <div class="form-group">
+                    <label for="client-name">Твоето име</label>
+                    <div class="input-glass">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="client-name" name="name" placeholder="Въведи име" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="client-phone">Телефон</label>
+                    <div class="input-glass">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="client-phone" name="phone" placeholder="+359 ..." required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-gold" style="margin-top: 20px;">
+                    <span>ЗАПАЗИ ЧАС</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </form>
+        </section>
+
+        <!-- Екран за потвърждение (Скрито по подразбиране) -->
+        <section id="confirmation-view" class="glass-panel" style="display: none; margin-top: 20px; text-align: center;">
+            <div class="view-header" style="margin-bottom: 15px;">
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">✨</div>
+                <h2>Заявката е изпратена</h2>
+                <p>Очаквай потвърждение от EMY Beauty Studio.</p>
+            </div>
+            <div id="confirmation-details" style="background: rgba(0, 0, 0, 0.2); border-radius: 15px; padding: 15px; text-align: left; font-size: 0.9rem; display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px;">
+                <!-- Тук JS ще попълни детайлите -->
+            </div>
+            <button id="reset-booking-btn" class="btn-gold" style="justify-content: center;">
+                <span>НАЧАЛО</span>
+            </button>
+        </section>
 
     </main>
 <!-- Времеви слотове (Скрито по подразбиране) -->
